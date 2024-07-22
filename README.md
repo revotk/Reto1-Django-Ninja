@@ -39,3 +39,42 @@ Reto 1. Microservicios con Django y API REST con Django-Ninja
    ```bash
    git clone https://github.com/revotk/Reto1-Django-Ninja.git
    cd microservicios-django
+
+   docker-compose build
+
+   docker-compose up -d
+
+   docker-compose run web python manage.py makemigrations
+
+   docker-compose run web python manage.py showmigrations
+
+   # Creamos el admin de la app
+
+   docker-compose run web python manage.py createsuperuser
+
+   # Para terminar y bajar el contenedor ejecutamos 
+
+   
+   docker-compose down
+
+
+## Uso
+
+- Acceder al API en `http://localhost:8000/api/usuarios/`
+- Acceder al sitio web para la carga masiva de datos en `http://localhost:8000/upload/`
+
+## Evidencias
+
+### API funcionando
+![API funcionando](./evidencias/api.png)
+
+### Carga masiva de datos
+![Carga masiva de datos](./evidencias/upload.png)
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, envía un pull request o abre un issue para discutir cualquier cambio que desees realizar.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.

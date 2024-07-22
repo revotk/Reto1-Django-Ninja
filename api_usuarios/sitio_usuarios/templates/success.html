@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Successful</title>
+</head>
+<body>
+    <h1>Upload Successful</h1>
+    
+    <h2>Usuarios Nuevos</h2>
+    <ul>
+        {% for user in new_users %}
+            <li>{{ user.nombre }} {{ user.apellido_paterno }} {{ user.apellido_materno }} ({{ user.nombre_cuenta }})</li>
+        {% empty %}
+            <li>No hay usuarios nuevos.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Usuarios actualizados</h2>
+    <ul>
+        {% for user in updated_users %}
+            <li>{{ user.nombre }} {{ user.apellido_paterno }} {{ user.apellido_materno }} ({{ user.nombre_cuenta }})</li>
+        {% empty %}
+            <li>No se actualizo la informacion de los usuarios.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/upload/">Subir otro archivo CSV</a>
+</body>
+</html>
